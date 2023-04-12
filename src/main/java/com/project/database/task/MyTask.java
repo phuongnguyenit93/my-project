@@ -15,8 +15,8 @@ public class MyTask {
     // initialDelay : Thời điểm delay khởi đầu
     // fixedDelay : Tần suất tính theo thời điểm task này end (Lệ thuộc time execute của task)
     // fixedRate : Tần suất tính theo thời điểm bắt đầu của 2 task (Không lệ thuộc time)
-    @Scheduled(initialDelay = 10000, 
-        fixedDelay = 1000)
+    //@Scheduled(initialDelay = 10000, 
+        //fixedDelay = 1000)
         //fixedRate = 1000)
     public void myTask2(){
         try {
