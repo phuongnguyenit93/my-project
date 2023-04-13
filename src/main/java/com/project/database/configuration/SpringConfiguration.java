@@ -1,5 +1,10 @@
 package com.project.database.configuration;
 
+// import java.io.File;
+
+// import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+// import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+// import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -10,4 +15,18 @@ public class SpringConfiguration {
     // public UserValidator userValidator() {
     //     return new UserValidator();
     // }
+
+    // Tomcat configuration (dành cho sping MVC, spring boot thì dùng application.properties)
+    // @Bean
+    // public ServletWebServerFactory servletContainer() {
+    //     TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
+
+    //     tomcat.setPort(8080);
+    //     tomcat.setContextPath("/path");
+    //     tomcat.setBaseDirectory(new File("./tomcat"));
+
+    //     return tomcat;
+    // }
+
+
 }

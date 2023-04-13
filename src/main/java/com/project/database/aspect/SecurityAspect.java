@@ -21,12 +21,10 @@ public class SecurityAspect {
         return joinPoint.getSignature().getName();
     }
 
-    @Pointcut("execution(* com.project.database.controller.SecurityController.*(..))"
-            + "|| execution(* org.springframework.security.web.session..*(..))"
-            )
+    @Pointcut("execution(* com.project.database.restController.SecurityController.*(..))")
     public void loggingCut() {}
 
-    @Pointcut("execution(* com.project.database.controller.SecurityController.setAuthentication(..)) && args(arg1,arg2)")
+    @Pointcut("execution(* com.project.database.restController.SecurityController.setAuthentication(..)) && args(arg1,arg2)")
     public void signUpCut(Object arg1 , Object arg2) {}
 
     @Pointcut("execution(* javax.servlet.http.HttpSessionListener.*(..))")

@@ -6,9 +6,10 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication(exclude = HibernateJpaAutoConfiguration.class)
+@SpringBootApplication(scanBasePackages = "com.project.database",exclude = HibernateJpaAutoConfiguration.class)
 @EnableScheduling
 @EnableAspectJAutoProxy
+// scanBasePackages sử dụng khi file class này khác package với package chứa các Bean cần khai báo
 // Do Hibernate ORM phiên bản mới nó có HibernateJPAAuto class, sẽ gây ra lỗi sau
 // java.lang.ClassCastException: org.springframework.orm.jpa.EntityManagerHolder cannot be cast to org.springframework.orm.hibernate5.SessionHolder]
 // Do Hibernate transaction xài class EntityManager 

@@ -1,4 +1,4 @@
-package com.project.database.controller;
+package com.project.database.restController;
 
 import java.util.List;
 

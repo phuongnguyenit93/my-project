@@ -1,4 +1,4 @@
-package com.project.database.controller;
+package com.project.database.restController;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
