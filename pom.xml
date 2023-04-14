@@ -18,6 +18,17 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+		<!-- Giúp cho việc tạo ra trang console trong spring boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 		<!-- Giúp cho việc khi save file không cần phải restart lại app -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

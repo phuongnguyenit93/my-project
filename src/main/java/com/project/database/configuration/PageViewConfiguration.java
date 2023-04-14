@@ -14,6 +14,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 public class PageViewConfiguration{
     
     // Cấu hình view cho JSP file . Các file sẽ được lưu trữ tại folder src/main/webapp/WEB-INF/views/
+    // Còn mặt định thymeleaf sẽ lưu tại src/main/resources/templates nếu không có 1 config nào
     // Có thể cấu hình thông qua application.properties
     @Autowired
     WebApplicationContext webApplicationContext;

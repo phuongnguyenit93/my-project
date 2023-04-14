@@ -98,6 +98,7 @@ public class SecurityConfiguration{
                 .antMatchers("/user-jdbc").authenticated()
                 .antMatchers("/user-hibernate").hasRole("USER")
                 .antMatchers("/user-jpa").hasRole("ADMIN")
+                //.antMatchers("/actuator/**").hasRole("ADMIN")
                 .anyRequest().permitAll()
             )
             .cors(
