@@ -18,6 +18,13 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
+		<!-- S3 Config -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.11.22</version>
+		</dependency>
+		<!-- Sử dụng kết hợp với Spring boot admin server -->
 		<dependency>
 			<groupId>de.codecentric</groupId>
 			<artifactId>spring-boot-admin-starter-client</artifactId>
