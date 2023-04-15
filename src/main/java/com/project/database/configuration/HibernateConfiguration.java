@@ -9,23 +9,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScan(basePackages = {"com.project.database"})
 @PropertySource(value = {"classpath:application.properties"})
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.project.database.dao")
 public class HibernateConfiguration {
     @Autowired
     DataSource dataSource;
     
     @Bean(name="entityManagerFactory")
-    // name="entityManagerFactory"
-    // Việc đặt tên này do trong JPA tránh cơ chế vòng lặp có sử dụng @Lazy cho bean
     public LocalSessionFactoryBean sessionFactoryBean() {
         LocalSessionFactoryBean bean = new LocalSessionFactoryBean();
         bean.setDataSource(dataSource);
@@ -33,6 +31,7 @@ public class HibernateConfiguration {
 
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect","org.hibernate.dialect.MySQL5InnoDBDialect");
+        hibernateProperties.put("hibernate.hbm2ddl.auto","update");
         hibernateProperties.put("hibernate.show_sql","true");
 
         bean.setHibernateProperties(hibernateProperties);
@@ -48,9 +47,11 @@ public class HibernateConfiguration {
         return hibernateTransactionManager;
     }
 
-    @Bean 
-    // Sử dụng cho JPA Repository
-    public HibernateTransactionManager transactionManager() {
-        return hibernateTransactionManager();
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(sessionFactoryBean().getObject());
+
+        return transactionManager;
     }
 }
