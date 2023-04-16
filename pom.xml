@@ -18,6 +18,13 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
+
+		<dependency>
+			<groupId>com.twilio.sdk</groupId>
+			<artifactId>twilio</artifactId>
+			<version>9.4.0</version>
+		</dependency>
+
 		<!-- S3 Config -->
 		<dependency>
 			<groupId>com.amazonaws</groupId>
