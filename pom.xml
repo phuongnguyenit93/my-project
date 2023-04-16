@@ -15,16 +15,37 @@
 	<name>database</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-
+		<!-- Limit request API (For both IP address and Server)-->
+		<!-- https://bucket4j.com/8.2.0/toc.html#basic-api-reference -->
+		<dependency>
+			<groupId>com.giffing.bucket4j.spring.boot.starter</groupId>
+			<artifactId>bucket4j-spring-boot-starter</artifactId>
+			<version>0.8.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+		</dependency>
+		<!-- Limit request API ()-->
+		<!-- https://bucket4j.com/8.2.0/toc.html#basic-api-reference -->
+		<!-- <dependency>
+			<groupId>com.bucket4j</groupId>
+			<artifactId>bucket4j_jdk8-core</artifactId>
+			<version>8.1.0</version>
+		</dependency> -->
+		<!-- Send Message and Call API -->
 		<dependency>
 			<groupId>com.twilio.sdk</groupId>
 			<artifactId>twilio</artifactId>
 			<version>9.4.0</version>
 		</dependency>
-
 		<!-- S3 Config -->
 		<dependency>
 			<groupId>com.amazonaws</groupId>
