@@ -20,7 +20,7 @@ This project use Java with some information
 ## Main Feature
 
 - ####	Buiding CRUD RestAPI or MVC (In progress)
-```http
+```
 -	Model (Entity) : Have relationship 1-1, 1-n, n-n to mapping database
 -	View use JSP and thymeleaf
 -	Database use MySQL with connector by 3 way : JDBC , Hibernate or JPA (Config by bean or application.properties) come with each query method.
