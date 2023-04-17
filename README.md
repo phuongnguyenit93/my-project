@@ -2,10 +2,10 @@
 This project made when I'm relearn Java Spring Boot . It contain all features that I'm research and learning and storing for my future working. Anytime I need something that I have learned before, this is the place. Hope you find some interesting thing in here
 ## 🚀 About Me
 My name is Phuong. I'm developer. Currently I'm still looking for new job (Up to date 04/14/2023). For any information, please contact me via
-```http
+```
   Phone/zalo : +84938159116
 ```
-```http
+```
   Email : phuongnguyenit93@gmail.com
 ```
 
@@ -20,11 +20,11 @@ This project use Java with some information
 ## Main Feature
 
 - ####	Buiding CRUD RestAPI or MVC (In progress)
-```
--	Model (Entity) : Have relationship 1-1, 1-n, n-n to mapping database
--	View use JSP and thymeleaf
--	Database use MySQL with connector by 3 way : JDBC , Hibernate or JPA (Config by bean or application.properties) come with each query method.
-```
+
+  -	Model (Entity) : Have relationship 1-1, 1-n, n-n to mapping database
+  -	View use JSP and thymeleaf
+  -	Database use MySQL with connector by 3 way : JDBC , Hibernate or JPA (Config by bean or application.properties) come with each query method.
+
 - ####	Seperated feature
 ```http
 -	Email configuration and send email by smtp (gmail) . Send mail by text or can use thymelead template to send.
